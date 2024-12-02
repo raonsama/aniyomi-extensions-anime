@@ -13,9 +13,9 @@ data class EpisodeListResponse(
     data class Episode(
         val id: String,
         val number: Float,
-        val title: String,
-        val hasDub: Boolean,
-        val isFiller: Boolean,
+        val title: String?,
+        val hasDub: Boolean?,
+        val isFiller: Boolean?,
         val img: String?,
         val description: String?,
         val createdAt: String?,
@@ -57,6 +57,7 @@ data class VideoSourceResponse(
 @Serializable
 data class EpisodeExtra(
     val source: String,
+    val episodeNum: Float,
     val episodeId: String,
     val hasDub: Boolean,
 )
